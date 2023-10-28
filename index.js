@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         h3.appendChild(ol)
     })
 
-
+    let h4 = document.createElement('h4')
+    let btn = document.createElement('button')
+    let input = document.createElement('input')
     
+    document.body.appendChild(h4)
+    h4.appendChild(input)
+    h4.appendChild(btn)
+    
+
 })
