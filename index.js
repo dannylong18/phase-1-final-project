@@ -4,4 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     title.id = 'title'
     document.body.appendChild(title)
 
+    let menu = document.createElement('h2')
+    menu.id = 'margMenu'
+    menu.innerText = 'Margarita Menu'
+    document.body.appendChild(menu)
+    
 })
