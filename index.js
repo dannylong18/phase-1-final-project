@@ -49,9 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let h4 = document.createElement('h4')
     let form = document.createElement('form')
+
     let input = document.createElement('input')
+    input.id = 'formInput'
     input.placeholder = 'Add a Margarita'
+
     let btn = document.createElement('button')
+    btn.id = 'formButton'
     btn.type = 'submit'
     btn.innerText = 'Submit'
     
@@ -62,6 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        console.log(e)
+        let inputText = document.getElementById('formInput')
+        let nextMarg = inputText.value.trim()
+        let div = document.createElement('div')
+        let ul = document.createElement('ul')
+
+        if (nextMarg) {
+            let li = document.createElement('li')
+            li.innerText = nextMarg
+            ul.appendChild(li)
+            div.appendChild(ul)
+            inputText.value = ' '
+        }
+        document.body.appendChild(div)
+
     })
 })
