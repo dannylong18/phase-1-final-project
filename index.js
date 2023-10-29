@@ -48,14 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     let h4 = document.createElement('h4')
-    let btn = document.createElement('button')
-    btn.innerText = 'Submit'
+    let form = document.createElement('form')
     let input = document.createElement('input')
-    
+    input.placeholder = 'Add a Margarita'
+    let btn = document.createElement('button')
+    btn.type = 'submit'
+    btn.innerText = 'Submit'
     
     document.body.appendChild(h4)
-    h4.appendChild(input)
-    h4.appendChild(btn)
+    h4.appendChild(form)
+    form.appendChild(input)
+    form.appendChild(btn)
     
 
 })
