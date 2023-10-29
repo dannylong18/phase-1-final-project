@@ -60,5 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.appendChild(input)
     form.appendChild(btn)
     
-
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        console.log(e)
+    })
 })
