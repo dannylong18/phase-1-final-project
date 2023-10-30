@@ -4,17 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     title.id = 'title'
     title.style.width = '430px'
     document.body.appendChild(title)
-
-    title.addEventListener('mouseover', (e) => {
-        let img = document.createElement('img')
-        img.id = 'margImg'
-        img.src = 'https://www.thecocktaildb.com/images/media/drink/srpxxp1441209622.jpg'
-        img.alt = 'Margarita Picture'
-        img.style.position = 'absolute'
-        img.style.maxWidth = '300px'
-        img.style.maxHeight = '175px'
-        title.appendChild(img)
-    })
     
     let menu = document.createElement('h2')
     menu.id = 'margMenu'
