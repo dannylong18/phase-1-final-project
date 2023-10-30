@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     let name = innerElement.strDrink
                     liName.innerText = name
                     liName.id = 'margName'
-                    //liName.style.whiteSpace = 'nowrap'
                     liName.style.display = 'inline-block'
                     ol.appendChild(liName)
                     liName.addEventListener ('mouseover', (e) => {
