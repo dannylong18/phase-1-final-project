@@ -38,7 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     let name = innerElement.strDrink
                     liName.innerText = name
                     liName.id = 'margName'
+                    //liName.style.whiteSpace = 'nowrap'
+                    liName.style.display = 'inline-block'
                     ol.appendChild(liName)
+                    liName.addEventListener ('mouseover', (e) => {
+                        let img = document.createElement('img')
+                        img.id = 'margImg'
+                        img.src = `${innerElement.strDrinkThumb}`
+                        img.alt = 'Margarita Picture'
+                        img.style.position = 'absolute'
+                        img.style.maxWidth = '300px'
+                        img.style.maxHeight = '175px'
+                        title.appendChild(img)
+                    })
 
                     let ul = document.createElement('ul')
                     let liDrinkGlass = document.createElement('li')
