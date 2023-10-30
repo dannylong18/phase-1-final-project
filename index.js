@@ -2,8 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let title = document.createElement('h1')
     title.innerText = 'Welcome to The Margarita Bar'
     title.id = 'title'
+    title.style.width = '430px'
     document.body.appendChild(title)
 
+    title.addEventListener('mouseover', (e) => {
+        let img = document.createElement('img')
+        img.id = 'margImg'
+        img.src = 'https://www.thecocktaildb.com/images/media/drink/srpxxp1441209622.jpg'
+        img.alt = 'Margarita Picture'
+        img.style.position = 'absolute'
+        img.style.maxWidth = '300px'
+        img.style.maxHeight = '175px'
+        title.appendChild(img)
+    })
+    
     let menu = document.createElement('h2')
     menu.id = 'margMenu'
     menu.innerText = 'Margarita Menu'
@@ -25,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let liName = document.createElement('li')
                     let name = innerElement.strDrink
                     liName.innerText = name
+                    liName.id = 'margName'
                     ol.appendChild(liName)
 
                     let ul = document.createElement('ul')
@@ -41,26 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     ol.appendChild(ul)
 
                 })
-            });
+            })
+            
         })
         document.body.appendChild(h3)
         h3.appendChild(ol)
     })
 
-    let h4 = document.createElement('h4')
+    let div = document.createElement('div')
     let form = document.createElement('form')
 
     let input = document.createElement('input')
     input.id = 'formInput'
-    input.placeholder = 'Add a Margarita'
+    input.placeholder = 'Suggest a Margarita'
 
     let btn = document.createElement('button')
     btn.id = 'formButton'
     btn.type = 'submit'
     btn.innerText = 'Submit'
     
-    document.body.appendChild(h4)
-    h4.appendChild(form)
+    document.body.appendChild(div)
+    div.appendChild(form)
     form.appendChild(input)
     form.appendChild(btn)
     
@@ -68,17 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault()
         let inputText = document.getElementById('formInput')
         let nextMarg = inputText.value.trim()
-        let div = document.createElement('div')
+        let submitDiv = document.createElement('div')
         let ul = document.createElement('ul')
 
         if (nextMarg) {
             let li = document.createElement('li')
             li.innerText = nextMarg
             ul.appendChild(li)
-            div.appendChild(ul)
-            inputText.value = ' '
+            submitDiv.appendChild(ul)
+            inputText.value = ''
         }
-        document.body.appendChild(div)
+        document.body.appendChild(submitDiv)
 
     })
 })
