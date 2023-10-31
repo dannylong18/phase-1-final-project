@@ -9,6 +9,8 @@ A single page web application designed using HTML, CSS, and Javascript. It allow
 
 ![Sample GIF](./spaUsage.gif)
 
+API used: https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
 ## Acknowledgements
 
 I would like to thank all of the Flatiron phase leaders, technical coaches, fellow students, and all others not mentioned here but who were extremely influential for all your help reaching this milestone. It could not have been done without you. 
